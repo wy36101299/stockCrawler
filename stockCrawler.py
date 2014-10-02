@@ -19,7 +19,7 @@ class StockCrawler(object):
 
 	def crawler(self,year,month):
 		br = mechanize.Browser()
-		res = br.open("http://www.twse.com.tw/ch/trading/exchange/STOCK_DAY/genpage/Report"+str(year)+str(month)+"/"+str(year)+str(month)+"_F3_1_8_0050.php?STK_NO=0050&myear="+str(year)+"&mmon="+str(month))
+		res = br.open("http://www.twse.com.tw/ch/trading/exchange/STOCK_DAY/genpage/Report"+str(year)+str(month)+"/"+str(year)+str(month)+"_F3_1_8_6214.php?STK_NO=6214&myear="+str(year)+"&mmon="+str(month))
 		soup = BeautifulSoup(res)
 		res = soup.find("table", class_="board_trad")
 		for tag in res.find_all(class_="basic2"):
